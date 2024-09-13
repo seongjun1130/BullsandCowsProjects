@@ -1,7 +1,10 @@
 package com.bullsandcows.lv1;
 
+import com.bullsandcows.lv1.manager.ServiceManager;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello Project");
+        ServiceManager sm = new ServiceManager();
+        sm.run();
     }
 }
