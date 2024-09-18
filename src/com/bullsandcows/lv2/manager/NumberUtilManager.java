@@ -11,6 +11,8 @@ public class NumberUtilManager {
 
     // 게임 시작시 3개의 숫자를 생성. Set으로 중복을 제거하고 List로 변환시켜 셔플.
     public void addNum() {
+        numSet.clear();
+        numList.clear();
         while (numSet.size() < 3) {
             // random 메소드를 통해 1~9 숫자 생성
             numSet.add((int) (Math.random() * 9) + 1);

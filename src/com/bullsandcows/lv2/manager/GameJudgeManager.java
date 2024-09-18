@@ -7,11 +7,12 @@ public class GameJudgeManager {
     private List<Integer> numList = new ArrayList<>();
     private List<Integer> userList = new ArrayList<>();
     private NumberUtilManager nm = new NumberUtilManager();
-    private boolean judgeflag = true;
+    private boolean judgeflag = false;
     private DisplayManger dm = new DisplayManger();
 
     // 게임의 승패를 판정하는 메소드
     public void judge(List<Integer> nums) {
+        judgeflag = !judgeflag;
         while (judgeflag) {
             numList = nums;
             // 3개이상의 strike 시 게임승리
