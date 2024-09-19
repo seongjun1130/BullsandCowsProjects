@@ -8,7 +8,8 @@ public class NumberUtilManager {
     private final Set<Integer> numSet = new HashSet<>();
     private final List<Integer> numList = new ArrayList<>();
     private final List<Integer> userNumList = new ArrayList<>();
-    Scanner sc = new Scanner(System.in);
+    private Scanner sc = new Scanner(System.in);
+    private final ChanceManger cm = new ChanceManger();
 
     // 유저 난이도 조절 메소드
     public void setDifficulty() {
@@ -21,6 +22,11 @@ public class NumberUtilManager {
             if (input.matches("[3-5]+")) {
                 difficulty = Integer.parseInt(input);
                 System.out.println(difficulty + " 자리수 난이도로 설정되었습니다.");
+                if (difficulty == 5) {
+                    cm.setChance(2);
+                } else {
+                    cm.setChance(1);
+                }
                 break;
             } else {
                 System.out.println("3,4,5 난이도만 선택이 가능합니다.");
