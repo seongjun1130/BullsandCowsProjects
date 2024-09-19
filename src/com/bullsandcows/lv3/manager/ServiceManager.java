@@ -1,6 +1,6 @@
-package com.bullsandcows.lv2.manager;
+package com.bullsandcows.lv3.manager;
 
-import com.bullsandcows.lv2.MainmenuType;
+import com.bullsandcows.lv3.MainmenuType;
 
 import java.util.Scanner;
 
@@ -30,7 +30,7 @@ public class ServiceManager {
                 gm.judge(nm.getNumber());
                 break;
             case HISTORY:
-
+                dm.printGameLog(gm.getGameCountList());
                 break;
             case EXIT:
                 System.out.println("게임을 종료합니다.");

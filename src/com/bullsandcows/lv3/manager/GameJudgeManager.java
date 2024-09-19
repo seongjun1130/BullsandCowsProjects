@@ -1,4 +1,4 @@
-package com.bullsandcows.lv2.manager;
+package com.bullsandcows.lv3.manager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,13 +12,14 @@ public class GameJudgeManager {
     private NumberUtilManager nm = new NumberUtilManager();
     private DisplayManger dm = new DisplayManger();
 
-    // 게임의 승패를 판정하는 메소드
+    // 게임의 승패판정 및 게임시도횟수 집계 메소드
     public void judge(List<Integer> nums) {
         judgeflag = !judgeflag;
         while (judgeflag) {
             numList = nums;
             // 3개이상의 strike 시 게임승리
             if (judgeStrikesAndBalls() == 3) {
+                gamecnt++;
                 gameCountList.add(gamecnt);
                 gamecnt = 0;
                 judgeflag = !judgeflag;
@@ -49,6 +50,7 @@ public class GameJudgeManager {
         dm.printScoreBoard(stkcnt, ballcnt);
         return stkcnt;
     }
+
     // 게임 기록 통계반환용 메소드
     public List<Integer> getGameCountList() {
         return gameCountList;
