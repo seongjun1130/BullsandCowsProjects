@@ -31,20 +31,30 @@ public class ChanceManger {
     public void getIndexNumberUpDown(List<Integer> nums) {
         if (chance >= 1) {
             System.out.println("알고 싶은 자리수를 입력해주세요");
+            Loop1:
             while (true) {
                 int chanceIndex = sc.nextInt();
+                sc.nextLine();
+                // 입력숫자와 Index 숫자를 비교하여 Up&Down 비교
                 if (nums.size() > chanceIndex - 1) {
-                    System.out.println("Up & Down 기준 숫자를 입력해주세요.");
-                    int standardNum = sc.nextInt();
-                    if (standardNum > nums.get(chanceIndex - 1)) {
-                        System.out.println("DOWN");
-                    } else if (standardNum < nums.get(chanceIndex - 1)) {
-                        System.out.println("UP");
-                    } else {
-                        System.out.println("Same");
+                    while (true) {
+                        System.out.println("Up & Down 기준 숫자를 입력해주세요.");
+                        String standardNum = sc.nextLine();
+                        // 입력비교값이 1~9 사이일경우만 진행
+                        if (!standardNum.matches("[1-9]+")) {
+                            System.out.println("1~9의 숫자만 입력해주세요");
+                        } else {
+                            if (Integer.parseInt(standardNum) > nums.get(chanceIndex - 1)) {
+                                System.out.println("DOWN");
+                            } else if (Integer.parseInt(standardNum) < nums.get(chanceIndex - 1)) {
+                                System.out.println("UP");
+                            } else if (Integer.parseInt(standardNum) == nums.get(chanceIndex - 1)) {
+                                System.out.println("Same");
+                            }
+                            chance--;
+                            break Loop1;
+                        }
                     }
-                    chance--;
-                    break;
                 } else {
                     System.out.println("자리수 입력을 확인해주세요.");
                     sc.nextLine();
@@ -71,9 +81,11 @@ public class ChanceManger {
     public void useChance(List<Integer> nums) {
         System.out.println("현재남은 찬스횟수 : " + getChanceNumber());
         System.out.println("찬스를 사용하려면 Y 입력 미사용시 N 입력");
+        // 루프 라벨기능 추가
         Loop1:
         while (true) {
             String userSelChance = sc.nextLine();
+            // 대소문자 구분없이 비교
             if (userSelChance.equalsIgnoreCase("Y")) {
                 while (true) {
                     System.out.println("0. 찬스 사용 중지 1. 정확한 번호 알기(기회 2회 소모) 2. 번호 Up & Down(기회 1회 소모) 3. 모든 번호의 합(기회 1회 소모)");

@@ -26,6 +26,7 @@ public class GameJudgeManager {
                 gamecnt++;
                 gameCountList.add(gamecnt);
                 gamecnt = 0;
+                // 찬스기능을 위한 찬스횟수 리필
                 cm.refillChance(nm.getDifficulty());
                 judgeflag = !judgeflag;
             } else {
