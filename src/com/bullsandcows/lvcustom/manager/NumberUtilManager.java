@@ -22,10 +22,11 @@ public class NumberUtilManager {
             if (input.matches("[3-5]+")) {
                 difficulty = Integer.parseInt(input);
                 System.out.println(difficulty + " 자리수 난이도로 설정되었습니다.");
+                // 난이도에 따른 찬스기회부여
                 if (difficulty == 5) {
-                    cm.setChance(2);
+                    cm.setChance(3);
                 } else {
-                    cm.setChance(1);
+                    cm.setChance(2);
                 }
                 break;
             } else {

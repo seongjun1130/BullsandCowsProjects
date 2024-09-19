@@ -39,18 +39,9 @@ public class GameJudgeManager {
         printAnswerLog();
         int stkcnt = 0;
         int ballcnt = 0;
+        // 유저가 찬스를 사용할지 여부확인
         if (cm.getChanceNumber() > 0) {
-            System.out.println("현재남은 찬스횟수 : " + cm.getChanceNumber());
-            System.out.println("찬스를 사용하려면 Y 입력 미사용시 N 입력");
-            switch (sc.nextLine().toUpperCase()) {
-                case "Y":
-                    cm.getIndexNumber(numList);
-                    break;
-                case "N":
-                    break;
-                default:
-                    System.out.println("Y,N 중 입력해주세요.");
-            }
+            cm.useChance(numList);
         }
         nm.inputNum();
         userList = nm.getUserNum();
