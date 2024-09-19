@@ -1,6 +1,6 @@
-package com.bullsandcows.lv1;
+package com.bullsandcows.lvcustom;
 
-import com.bullsandcows.lv1.manager.ServiceManager;
+import com.bullsandcows.lvcustom.manager.ServiceManager;
 
 public class Main {
     public static void main(String[] args) {
