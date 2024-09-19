@@ -55,6 +55,18 @@ public class ChanceManger {
         }
     }
 
+    // 모든 정답 숫자의 합 출력 메소드
+    public void getSumAnswer(List<Integer> nums) {
+        if (chance >= 1) {
+            System.out.println("모든 번호의 합은");
+            int sum = nums.stream().mapToInt(num -> num).sum();
+            System.out.println(sum + " 입니다.");
+            chance--;
+        } else {
+            System.out.println("가진 찬스횟수가 부족합니다.");
+        }
+    }
+
     // 유저가 찬스기능을 활요하는지에 대한 흐름분기 제어
     public void useChance(List<Integer> nums) {
         System.out.println("현재남은 찬스횟수 : " + getChanceNumber());
@@ -64,13 +76,18 @@ public class ChanceManger {
             String userSelChance = sc.nextLine();
             if (userSelChance.equalsIgnoreCase("Y")) {
                 while (true) {
-                    System.out.println("1. 정확한 번호 알기(기회 2회 소모) 2. 번호 Up & Down(기회 1회 소모)");
+                    System.out.println("0. 찬스 사용 중지 1. 정확한 번호 알기(기회 2회 소모) 2. 번호 Up & Down(기회 1회 소모) 3. 모든 번호의 합(기회 1회 소모)");
                     int userSelChanceMenu = sc.nextInt();
-                    if (userSelChanceMenu == 1) {
+                    if (userSelChanceMenu == 0) {
+                        break Loop1;
+                    } else if (userSelChanceMenu == 1) {
                         getIndexNumber(nums);
                         break Loop1;
                     } else if (userSelChanceMenu == 2) {
                         getIndexNumberUpDown(nums);
+                        break Loop1;
+                    } else if (userSelChanceMenu == 3) {
+                        getSumAnswer(nums);
                         break Loop1;
                     } else {
                         System.out.println("1, 2 번중 입력해주세요.");
@@ -93,6 +110,7 @@ public class ChanceManger {
         return chance;
     }
 
+    // 찬스횟수를 다시 충전시켜주는 메소드
     public void refillChance(int difficulty) {
         if (difficulty == 5) {
             chance = 3;
