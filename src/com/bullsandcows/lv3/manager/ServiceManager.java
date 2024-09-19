@@ -1,6 +1,6 @@
 package com.bullsandcows.lv3.manager;
 
-import com.bullsandcows.lv3.MainmenuType;
+import com.bullsandcows.lv3.MainMnuType;
 
 import java.util.Scanner;
 
@@ -12,6 +12,7 @@ public class ServiceManager {
 
     // 전체적인 프로그램 흐름을 담당하는 메소드
     public void run() {
+        System.out.println("환영합니다! 원하시는 번호를 입력해주세요.");
         while (true) {
             try {
                 dm.printMainMenu();
@@ -24,7 +25,7 @@ public class ServiceManager {
 
     // MainMenu 선택에 따른 행동흐름 제어
     private void controlMainMenuSelection() {
-        switch (MainmenuType.find(sc.nextLine())) {
+        switch (MainMnuType.find(sc.nextLine())) {
             case YES:
                 nm.addNum();
                 gm.judge(nm.getNumber());
@@ -33,7 +34,7 @@ public class ServiceManager {
                 dm.printGameLog(gm.getGameCountList());
                 break;
             case EXIT:
-                System.out.println("게임을 종료합니다.");
+                System.out.println("< 숫자 야구 게임을 종료합니다 >");
                 System.exit(0);
                 break;
         }

@@ -16,7 +16,6 @@ public class DisplayManger {
 
     // 게임 시작시 메인메뉴 출력
     public void printMainMenu() {
-        System.out.println("환영합니다! 원하시는 번호를 입력해주세요.");
         System.out.println("1. 게임 시작하기 2. 게임 기록 보기 3. 종료하기");
     }
 
@@ -28,6 +27,7 @@ public class DisplayManger {
         } else {
             int gameCnt = 0;
             System.out.println("<게임 기록 보기>");
+            // 패싱 받은 List 를 전체반복하며 유저 게임횟수 출력
             for (int item : gameLogList) {
                 System.out.println(++gameCnt + " 번째 게임 : 시도횟수 - " + item);
             }

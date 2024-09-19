@@ -56,7 +56,7 @@ public class GameJudgeManager {
         return gameCountList;
     }
 
-    // 테스트용 정답 로그출력용 메소드.
+    // 테스트용 정답 출력용 메소드.
     public void printAnswerLog() {
         for (int item : numList) {
             System.out.print(item + " ");
