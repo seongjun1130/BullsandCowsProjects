@@ -123,23 +123,6 @@ public class ChanceManger {
                         System.out.println("0, 1, 2, 3 번중 입력해주세요.");
                     }
                 }
-//                    if (chanceIndex.matches("[0-3]+")) {
-//                        int userSelChanceMenu = Integer.parseInt(chanceIndex);
-//                        if (userSelChanceMenu == 0) {
-//                            break Loop1;
-//                        } else if (userSelChanceMenu == 1) {
-//                            getIndexNumber(nums);
-//                            break Loop1;
-//                        } else if (userSelChanceMenu == 2) {
-//                            getIndexNumberUpDown(nums);
-//                            break Loop1;
-//                        } else if (userSelChanceMenu == 3) {
-//                            getSumAnswer(nums);
-//                            break Loop1;
-//                        }
-//                    } else {
-//                        System.out.println("0, 1, 2, 3 번중 입력해주세요.");
-//                    }
             } else if (userSelChance.equalsIgnoreCase("N")) {
                 break;
             } else {
