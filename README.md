@@ -11,7 +11,7 @@
 - [프로그램 기능구현표](#프로그램-기능구현표)
 - [프로그램 플로우차트](#프로그램-플로우차트)
 - [프로그램 동작화면](#프로그램-동작-화면)
-- [아키텍쳐](#Architecture)
+- [아키텍쳐](#architecture)
 
 ## 개요
 - 프로젝트 이름 : BullsandCowsProjects
@@ -71,59 +71,63 @@
 https://velog.io/@lionjojo/posts
 - ### project troubleshooting
 [https://velog.io/@lionjojo/JAVA-%EA%B3%84%EC%82%B0%EA%B8%B0-%EB%A7%8C%EB%93%A4%EA%B8%B0-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85](https://velog.io/@lionjojo/JAVA-%EC%88%AB%EC%9E%90%EC%95%BC%EA%B5%AC%EA%B2%8C%EC%9E%84-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85)
+
 ## Architecture
 ```
 📦 
-├─ .gitignore
-├─ .idea
-│  ├─ .gitignore
-│  ├─ material_theme_project_new.xml
-│  ├─ misc.xml
-│  ├─ modules.xml
-│  ├─ uiDesigner.xml
-│  └─ vcs.xml
-├─ BullsandCowsProjects.iml
-└─ src
-   └─ com
-      └─ bullsandcows
-         ├─ lv1 : Lv.1 필수기능구현 숫자야구
-         │  ├─ Main.java : main 메소드 실행 Class
-         │  └─ manager : 각 기능별 Manager Class 집합 패키지
-         │     ├─ DisplayManger.java : 콘솔 출력 담당 Class
-         │     ├─ GameJudgeManager.java : 게임 승패 및 게임 결과(Strike, Ball) 체크 Class
-         │     ├─ NumberUtilManager.java : 정답숫자 생성, 유저 입력 숫자 유효성 검사 Class
-         │     └─ ServiceManager.java : 게임 전체 흐름 담당 Class
-         ├─ lv2 : Lv.2 필수기능구현 숫자야구
-         │  ├─ Main.java
-         │  ├─ MainmenuType.java : MainMenu Enum Class
-         │  └─ manager
-         │     ├─ DisplayManger.java
-         │     ├─ GameJudgeManager.java
-         │     ├─ NumberUtilManager.java
-         │     └─ ServiceManager.java
-         ├─ lv3 : Lv.3 필수기능구현 숫자야구
-         │  ├─ Main.java
-         │  ├─ MainMnuType.java
-         │  └─ manager
-         │     ├─ DisplayManger.java
-         │     ├─ GameJudgeManager.java
-         │     ├─ NumberUtilManager.java
-         │     └─ ServiceManager.java
-         ├─ lv4 : Lv.4 필수기능구현 숫자야구
-         │  ├─ Main.java
-         │  ├─ MainMnuType.java
-         │  └─ manager
-         │     ├─ DisplayManger.java
-         │     ├─ GameJudgeManager.java
-         │     ├─ NumberUtilManager.java
-         │     └─ ServiceManager.java
-         └─ lvcustom : 찬스 추가 기능구현 숫자야구
-            ├─ Main.java
-            ├─ MainMnuType.java
-            └─ manager
-               ├─ ChanceManger.java : 찬스 추가 기능 담당 Class
-               ├─ DisplayManger.java
-               ├─ GameJudgeManager.java
-               ├─ NumberUtilManager.java
-               └─ ServiceManager.java
+├─ .gitignore
+├─ .idea
+│  ├─ .gitignore
+│  ├─ material_theme_project_new.xml
+│  ├─ misc.xml
+│  ├─ modules.xml
+│  ├─ uiDesigner.xml
+│  └─ vcs.xml
+├─ BullsandCowsProjects.iml
+├─ README.md
+└─ src
+   └─ com
+      └─ bullsandcows
+         ├─ lv1 : Lv.1 필수기능구현 숫자야구
+         │  ├─ Main.java : main 메소드 실행 Class
+         │  └─ manager : 각 기능별 Manager Class 집합 패키지
+         │     ├─ DisplayManger.java : 콘솔 출력 담당 Class
+         │     ├─ GameJudgeManager.java : 게임 승패 및 게임 결과(Strike, Ball) 체크 Class
+         │     ├─ NumberUtilManager.java : 정답숫자 생성, 유저 입력 숫자 유효성 검사 Class
+         │     └─ ServiceManager.java : 게임 전체 흐름 담당 Class
+         ├─ lv2 : Lv.2 필수기능구현 숫자야구
+         │  ├─ Main.java
+         │  ├─ MainmenuType.java : MainMenu Enum Class
+         │  └─ manager
+         │     ├─ DisplayManger.java
+         │     ├─ GameJudgeManager.java
+         │     ├─ NumberUtilManager.java
+         │     └─ ServiceManager.java
+         ├─ lv3 : Lv.3 필수기능구현 숫자야구
+         │  ├─ Main.java
+         │  ├─ MainMnuType.java
+         │  └─ manager
+         │     ├─ DisplayManger.java
+         │     ├─ GameJudgeManager.java
+         │     ├─ NumberUtilManager.java
+         │     └─ ServiceManager.java
+         ├─ lv4 : Lv.4 필수기능구현 숫자야구
+         │  ├─ Main.java
+         │  ├─ MainMnuType.java
+         │  └─ manager
+         │     ├─ DisplayManger.java
+         │     ├─ GameJudgeManager.java
+         │     ├─ NumberUtilManager.java
+         │     └─ ServiceManager.java
+         └─ lvcustom : 찬스 추가 기능구현 숫자야구
+            ├─ ChanceMainMenuType.java : 찬스메뉴 Enum Class
+            ├─ Main.java
+            ├─ MainMenuType.java
+            └─ manager
+               ├─ ChanceManger.java : 찬스 추가 기능 담당 Class
+               ├─ DisplayManger.java
+               ├─ GameJudgeManager.java
+               ├─ NumberUtilManager.java
+               └─ ServiceManager.java
 ```
+©generated by [Project Tree Generator](https://woochanleee.github.io/project-tree-generator)
