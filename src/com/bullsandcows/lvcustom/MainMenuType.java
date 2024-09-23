@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 public enum MainMenuType {
     SETDIFFT("0"),
-    YES("1"),
+    START("1"),
     HISTORY("2"),
     EXIT("3");
 
@@ -18,14 +18,14 @@ public enum MainMenuType {
     private final String mainMenu;
 
     // 생성자를 통한 String 매칭
-    MainMenuType(String mainmenu) {
-        this.mainMenu = mainmenu;
+    MainMenuType(String mainMenu) {
+        this.mainMenu = mainMenu;
     }
 
     // 입력된 연산자를 통해 Map 안에서 열거 객체 리턴
-    public static MainMenuType find(String mainmenu) {
-        if (MAINMENU_TYPE_MAP_MAP.containsKey(mainmenu)) {
-            return MAINMENU_TYPE_MAP_MAP.get(mainmenu);
+    public static MainMenuType find(String mainMenu) {
+        if (MAINMENU_TYPE_MAP_MAP.containsKey(mainMenu)) {
+            return MAINMENU_TYPE_MAP_MAP.get(mainMenu);
         } else {
             // 지정메뉴외 문자 입력시 예외발생
             throw new NullPointerException("올바른 숫자를 입력해주세요!");

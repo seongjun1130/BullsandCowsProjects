@@ -33,7 +33,7 @@ public class ServiceManager {
                 gm.judge(nm.getNumber());
                 break;
             // 게임 실행 메뉴
-            case YES:
+            case START:
                 nm.addNum();
                 gm.judge(nm.getNumber());
                 break;

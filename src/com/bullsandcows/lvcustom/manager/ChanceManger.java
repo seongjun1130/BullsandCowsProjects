@@ -1,7 +1,10 @@
 package com.bullsandcows.lvcustom.manager;
 
+import com.bullsandcows.lvcustom.ChanceMainMenuType;
+
 import java.util.List;
 import java.util.Scanner;
+
 
 public class ChanceManger {
     private static int chance = 2;
@@ -102,24 +105,41 @@ public class ChanceManger {
                     System.out.println("0. 찬스 사용 중지 1. 정확한 번호 알기(기회 2회 소모) 2. 번호 Up & Down(기회 1회 소모) 3. 모든 번호의 합(기회 1회 소모)");
                     String chanceIndex = sc.nextLine();
                     // 정해진 메뉴 외 입력 검증
-                    if (chanceIndex.matches("[0-3]+")) {
-                        int userSelChanceMenu = Integer.parseInt(chanceIndex);
-                        if (userSelChanceMenu == 0) {
-                            break Loop1;
-                        } else if (userSelChanceMenu == 1) {
-                            getIndexNumber(nums);
-                            break Loop1;
-                        } else if (userSelChanceMenu == 2) {
-                            getIndexNumberUpDown(nums);
-                            break Loop1;
-                        } else if (userSelChanceMenu == 3) {
-                            getSumAnswer(nums);
-                            break Loop1;
+                    if (chanceIndex.matches("[0-3]+") && Integer.parseInt(chanceIndex) > -1 && Integer.parseInt(chanceIndex) < 4) {
+                        switch (ChanceMainMenuType.find(chanceIndex)) {
+                            case EXITCHANCE:
+                                break Loop1;
+                            case OPENNUM:
+                                getIndexNumber(nums);
+                                break Loop1;
+                            case UPDOWN:
+                                getIndexNumberUpDown(nums);
+                                break Loop1;
+                            case SUMNUM:
+                                getSumAnswer(nums);
+                                break Loop1;
                         }
                     } else {
                         System.out.println("0, 1, 2, 3 번중 입력해주세요.");
                     }
                 }
+//                    if (chanceIndex.matches("[0-3]+")) {
+//                        int userSelChanceMenu = Integer.parseInt(chanceIndex);
+//                        if (userSelChanceMenu == 0) {
+//                            break Loop1;
+//                        } else if (userSelChanceMenu == 1) {
+//                            getIndexNumber(nums);
+//                            break Loop1;
+//                        } else if (userSelChanceMenu == 2) {
+//                            getIndexNumberUpDown(nums);
+//                            break Loop1;
+//                        } else if (userSelChanceMenu == 3) {
+//                            getSumAnswer(nums);
+//                            break Loop1;
+//                        }
+//                    } else {
+//                        System.out.println("0, 1, 2, 3 번중 입력해주세요.");
+//                    }
             } else if (userSelChance.equalsIgnoreCase("N")) {
                 break;
             } else {
