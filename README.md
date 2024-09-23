@@ -1,7 +1,7 @@
 #     BullsandCowsProject 📝
 이 프로젝트는 숫자 야구 게임을 객체 지향 프로그래밍(OOP)의 원칙에 따라 설계하고 구현한 것입니다. 사용자는 임의로 생성된 숫자를 맞추는 게임으로, 각 라운드마다 입력한 숫자와 정답 사이의 일치 정도를 알려줍니다. 이 게임은 코드의 재사용성, 유지보수성, 그리고 확장성을 고려하여 OOP의 원칙을 충실히 반영했습니다.
 
-해당 계산기는 하단 구현 가이드라인에 초점을 맞추어 구현하였습니다.
+해당 프로그램은 하단 구현 가이드라인에 초점을 맞추어 구현하였습니다.
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fseongjun1130%2FBullsandCowsProjects&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://github.com/seongjun1130)
 
