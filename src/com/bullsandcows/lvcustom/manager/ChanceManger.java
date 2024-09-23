@@ -13,8 +13,10 @@ public class ChanceManger {
             System.out.println("알고 싶은 자리수를 입력해주세요");
             while (true) {
                 String chanceIndex = sc.nextLine();
+                // 숫자 외 입력 검증
                 if (chanceIndex.matches("[1-5]+")) {
                     int intChanceIndex = Integer.parseInt(chanceIndex);
+                    // 현재 난이도에 맞는 자릿수 검증
                     if (nums.size() > intChanceIndex - 1) {
                         System.out.println(chanceIndex + " 번째 숫자는 " + nums.get(intChanceIndex - 1) + " 입니다.");
                         chance -= 2;
@@ -38,9 +40,11 @@ public class ChanceManger {
             Loop1:
             while (true) {
                 String chanceIndex = sc.nextLine();
+                // 숫자 외 입력 검증
                 if (chanceIndex.matches("[1-5]+")) {
                     int intChance = Integer.parseInt(chanceIndex);
                     // 입력숫자와 Index 숫자를 비교하여 Up&Down 비교
+                    // 현재 난이도에 맞는 자릿수 검증
                     if (nums.size() > intChance - 1) {
                         while (true) {
                             System.out.println("Up & Down 기준 숫자를 입력해주세요.");
@@ -96,22 +100,24 @@ public class ChanceManger {
             if (userSelChance.equalsIgnoreCase("Y")) {
                 while (true) {
                     System.out.println("0. 찬스 사용 중지 1. 정확한 번호 알기(기회 2회 소모) 2. 번호 Up & Down(기회 1회 소모) 3. 모든 번호의 합(기회 1회 소모)");
-                    int userSelChanceMenu = sc.nextInt();
-                    sc.nextLine();
-                    if (userSelChanceMenu == 0) {
-                        break Loop1;
-                    } else if (userSelChanceMenu == 1) {
-                        getIndexNumber(nums);
-                        break Loop1;
-                    } else if (userSelChanceMenu == 2) {
-                        getIndexNumberUpDown(nums);
-                        break Loop1;
-                    } else if (userSelChanceMenu == 3) {
-                        getSumAnswer(nums);
-                        break Loop1;
+                    String chanceIndex = sc.nextLine();
+                    // 정해진 메뉴 외 입력 검증
+                    if (chanceIndex.matches("[0-3]+")) {
+                        int userSelChanceMenu = Integer.parseInt(chanceIndex);
+                        if (userSelChanceMenu == 0) {
+                            break Loop1;
+                        } else if (userSelChanceMenu == 1) {
+                            getIndexNumber(nums);
+                            break Loop1;
+                        } else if (userSelChanceMenu == 2) {
+                            getIndexNumberUpDown(nums);
+                            break Loop1;
+                        } else if (userSelChanceMenu == 3) {
+                            getSumAnswer(nums);
+                            break Loop1;
+                        }
                     } else {
                         System.out.println("0, 1, 2, 3 번중 입력해주세요.");
-                        sc.nextLine();
                     }
                 }
             } else if (userSelChance.equalsIgnoreCase("N")) {
