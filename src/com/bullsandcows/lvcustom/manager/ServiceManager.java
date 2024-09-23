@@ -1,6 +1,6 @@
 package com.bullsandcows.lvcustom.manager;
 
-import com.bullsandcows.lvcustom.MainMnuType;
+import com.bullsandcows.lvcustom.MainMenuType;
 
 import java.util.Scanner;
 
@@ -25,7 +25,7 @@ public class ServiceManager {
 
     // MainMenu 선택에 따른 행동흐름 제어
     private void controlMainMenuSelection() {
-        switch (MainMnuType.find(sc.nextLine())) {
+        switch (MainMenuType.find(sc.nextLine())) {
             // 유저 난이도선택 메뉴
             case SETDIFFT:
                 nm.setDifficulty();
@@ -33,7 +33,7 @@ public class ServiceManager {
                 gm.judge(nm.getNumber());
                 break;
             // 게임 실행 메뉴
-            case YES:
+            case START:
                 nm.addNum();
                 gm.judge(nm.getNumber());
                 break;
