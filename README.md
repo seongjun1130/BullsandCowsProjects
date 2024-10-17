@@ -69,7 +69,9 @@
 ## Communication
 - ### Main blog
 https://velog.io/@lionjojo/posts
-- ### project troubleshooting
+- ### Main project Documentation
+https://velog.io/@lionjojo/JAVA-%EC%88%AB%EC%9E%90%EC%95%BC%EA%B5%AC%EA%B2%8C%EC%9E%84
+- ### Project troubleshooting
 [https://velog.io/@lionjojo/JAVA-%EA%B3%84%EC%82%B0%EA%B8%B0-%EB%A7%8C%EB%93%A4%EA%B8%B0-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85](https://velog.io/@lionjojo/JAVA-%EC%88%AB%EC%9E%90%EC%95%BC%EA%B5%AC%EA%B2%8C%EC%9E%84-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85)
 
 ## Architecture
